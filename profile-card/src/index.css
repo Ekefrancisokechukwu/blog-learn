@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  img {
+    @apply w-full h-full object-cover;
+  }
+}
+
+@layer components {
+  .clip {
+    clip-path: polygon(0 43%, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 59%);
+  }
+
+  .link {
+    @apply hover:bg-gray-200 p-2 rounded-md transition-all duration-500;
+  }
+
+  .form-group {
+    @apply flex flex-col border py-1 px-3 rounded-md focus:outline outline-1 outline-neutral-700;
+  }
+  .form-label {
+    @apply capitalize;
+  }
+  .form-input {
+    @apply outline-none;
+  }
+  .edit-container::-webkit-scrollbar {
+    width: 15px;
+  }
+  .edit-container::-webkit-scrollbar-thumb {
+    @apply bg-gray-200 rounded-tr-md rounded-b;
+  }
+}
